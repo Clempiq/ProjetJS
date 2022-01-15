@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0/css/bootstrap.css'/>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css'/>     
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js'></script>  
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    
+
+ 
+    
+</head>
+<body>
+    <header>
+        <img src="public/images/RAB.png" alt="logo" id="logo">
+        <h1 id="titre"><b>Rent-A-Bike</b></h1>
+    </header>
+    <main>
+        <section id="slider-container">
+            <h2 class="text-center text-info display-4">Utilisation du site</h2>
+            <div class="container-fluid slider">
+                <div class="col-md-12 slides d-flex" >
+                    <div class="item active">
+                        <img  src="public/images/clicstation.jpg" alt="">
+                    </div>
+                    <div class="item">
+                        <img  src="public/images/clicnext.jpg" alt="">
+                    </div>
+                    <div class="item">
+                        <img  src="public/images/signez.jpg" alt="">
+                    </div>
+                    <div class="item">
+                        <img  src="public/images/validez.jpg" alt="">
+                    </div>
+                    <div class="item">
+                        <img  src="public/images/reserve.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+                <div class="col-md-6 control d-flex justify-content-around my-5 m-auto">
+                    <button class="button prev px-5"><span class="fas fa-chevron-left fa-2x"></span></button> 
+                    <button class="button play px-5"><span class="fas fa-play fa-2x"></span></button> 
+                    <button class="button pause px-5"><span class="fas fa-pause fa-2x "></span></button>
+                    <button class="button next px-5"><span class="fas fa-chevron-right fa-2x"></span></button> 
+                </div>
+        </section>
+        
+        <div id="map"><div id="mapid" style="width: 100%; height: 400px;"></div>
+
+        
+        </div>
+        <div id="form">
+
+            <div class="adr">
+
+            </div>
+
+            <form action="" id="name" class="reservation">
+                <label for="nom">Nom :</label>
+                <input type="text" minlength="2" id="name2">
+                <br><br>
+                <label for="prenom">Prénom</label>
+                <input type="text" minlength="2" id="name3">
+                <br><br>
+                <input type="button" value="Signez" id="resa" onclick="showCanva()" onclick="reservez()">
+                
+                <input type="button" value="Validez" id="valid" onclick="reservez()" class="reservation">
+                <br><br>
+                <canvas id="canvas"></canvas>
+                
+                
+            </form>
+        </div>
+    </main>
+    <div id="text" class="reservation">
+        
+    </div>
+    <div class="reservation" id="minu"><b>Il vous reste <span id="time">20:00</span> minutes pour récupérer votre vélo</b></div>
+    
+    <footer>
+        <h3>Designed by Clément Piquenet</h3>
+    </footer>
+    
+    <script src="public/js/slider.js"></script>
+    <script src="public/js/getData.js"></script>
+    <script src="public/js/canvas.js"></script>
+    
+    
+</body>
+</html>
